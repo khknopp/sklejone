@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'RSSDemo/RSSDemo.dart';
 import 'package:expandable/expandable.dart';
+import './kajto.dart';
 
 void main(){
   runApp(new MaterialApp(
@@ -48,6 +49,9 @@ class AfterSplash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: <String, WidgetBuilder>{
+      '/kajto': (BuildContext context) => new Page2(),
+    },
       debugShowCheckedModeBanner: false,
       title: 'RSS',
       home: new RSSDemo(),
