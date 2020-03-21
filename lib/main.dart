@@ -50,7 +50,7 @@ class AfterSplash extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: <String, WidgetBuilder>{
-      '/kajto': (BuildContext context) => new Page2(),
+      '/kajto': (BuildContext context) => new MyApp1(),
     },
       debugShowCheckedModeBanner: false,
       title: 'RSS',
