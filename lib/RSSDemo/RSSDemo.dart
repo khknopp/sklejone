@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:expandable/expandable.dart';
+import '../kajto.dart';
 
 class RSSDemo extends StatefulWidget {
   //
@@ -52,6 +53,15 @@ class RSSDemoState extends State<RSSDemo> {
   }
 
   load() async {
+    new Padding(
+              padding: const EdgeInsets.only(top: 78.0),
+              child: new IconButton(
+                onPressed: (() => Navigator.of(context).pushNamed('/kajto')),
+                icon: new Icon(Icons.arrow_forward),
+                iconSize: 60.0,
+                color: Colors.pink[300],
+              ),
+            )
     updateTitle(loadingFeedMsg);
     loadFeed().then((result) {
       if (null == result || result.toString().isEmpty) {
